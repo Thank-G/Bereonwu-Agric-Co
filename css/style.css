@@ -1713,6 +1713,8 @@ h1, h2, h3, h4, h5,
   }
 
   
+
+ 
 .filters .btn {
   border-color: transparent;
   font-size: .8rem;
@@ -1724,12 +1726,12 @@ h1, h2, h3, h4, h5,
   color: #343a40; }
   .filters .btn:hover {
     border-color: transparent;
-    background: #fd7e14;
+    background: #0d0cb5;
     color: #fff; }
   .filters .btn.active {
-    background: #fd7e14 !important;
+    background: #0d0cb5 !important;
     color: #fff;
-    border-color: #fd7e14 !important; }
+    border-color: #0d0cb5 !important; }
 
     
 .post-entry {
@@ -1757,3 +1759,51 @@ h1, h2, h3, h4, h5,
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
+
+
+/* Isotope*/
+.item {
+  border: none; }
+  .item .item-wrap {
+    display: block;
+    position: relative; }
+    .item .item-wrap:after {
+      z-index: 2;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: .3s all ease-in-out;
+      -o-transition: .3s all ease-in-out;
+      transition: .3s all ease-in-out; }
+    .item .item-wrap > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+      transform: translate(-50%, -50%) scale(0);
+      color: #fff;
+      font-size: 1.7rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; }
+    .item .item-wrap:hover:after {
+      opacity: 1;
+      visibility: visible; }
+    .item .item-wrap:hover span {
+      margin-top: 0px;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1); }
+
